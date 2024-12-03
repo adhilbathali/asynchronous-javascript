@@ -1,0 +1,138 @@
+body{
+    font-family: poppins;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button{
+    border: none;
+    background-color: yellow;
+    color: blueviolet;
+    font-size: x-large;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.5em;
+    box-shadow: 0px 0.3em 0px 0px orange;
+    margin-top: 0.8em;
+}
+
+button:hover{
+    opacity: 0.8;
+    transition: 200ms;
+}
+
+button:active{
+    box-shadow: none;
+    transform: translateY(0.3em);
+}
+
+.placeholder{
+    border: 5px solid rgb(226, 226, 6);
+    box-shadow: inset -2px -2px 8px 0px rgba(0, 0, 0, 0.500);
+    width: 20em;
+    height: 10rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #333333ea;
+    padding: 2rem;
+    text-shadow: 1.5px 1px 2px white;
+}
+
+.promise{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: top;
+    padding: 1rem;
+}
+
+.other-jobs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px dotted dodgerblue;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem;
+    min-height: 12rem;
+    min-width: 9rem;
+}
+    
+#circle{
+    position: relative;
+    margin: 10px;
+    height: 2em;
+    width: 2em;
+    background-color:violet;
+    border-radius: 50%;
+}
+
+.click-motion{
+    animation: circle-motion 15s ease-in-out 1 alternate both;
+}
+
+@keyframes circle-motion {
+    0% {
+      transform: translate(0, 0) scale(1);
+      background-color: red;
+      border-radius: 50%;
+    }
+    10% {
+      transform: translate(-100vw, 0) scale(1.5);
+      background-color: orange;
+      border-radius: 0%; 
+    }
+    20% {
+      transform: translate(10vw, -30vh) scale(0.8);
+      background-color: cyan;
+      border-radius: 30%; 
+    }
+    30% {
+      transform: translate(100vw, 60vh) scale(1.2);
+      background-color: purple;
+      border-radius: 50%; 
+    }
+    40% {
+      transform: translate(-100vw, -10vh) scale(1);
+      background-color: royalblue;
+      border-radius: 0%; 
+    }
+    50% {
+      transform: translate(50vw, -100vh) scale(2);
+      background-color: blueviolet;
+      border-radius: 20%; 
+    }
+    60% {
+        transform: translate(-80vw, 90vh) scale(2);
+        background-color: magenta;
+        border-radius: 20%; 
+      }
+    70% {
+    transform: translate(50vw, -100vh) scale(2);
+    background-color: green;
+    border-radius: 20%; 
+    }
+    80% {
+    transform: translate(10vw, 100vh) scale(2);
+    background-color: yellow;
+    border-radius: 20%; 
+    }
+    90% {
+    transform: translate(-80vw, -100vh) scale(2);
+    background-color: maroon;
+    border-radius: 20%; 
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+      background-color: olivedrab;
+      border-radius: 50%; 
+    }
+  }
+  
