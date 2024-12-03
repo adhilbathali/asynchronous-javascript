@@ -1,16 +1,9 @@
-// function myfetch(url){
-//     fetch(url).then(Response=>Response.json())
-//     .then((json)=>{
-//         console.log("Data fetched successfully:", json)
-//         return json
-//     })
-//     .catch(()=>{
-//         console.log("No internet connection. Retrying in 30 seconds...")
-//         setTimeout(()=>{
-//             myfetch(url), 30000
-//         })
-//     })
-// }
+const apiFetch = document.getElementById('api-fetch')
+const fetchPlaceHolder = document.getElementById('fetch-data')
+const url = 'https://jsonplaceholder.typicode.com/todos/1'
+const circle = document.getElementById('circle')
+const afterParty = document.getElementById('after-party')
+
 
 function myfetch(url) {
     return fetch(url)
@@ -30,17 +23,9 @@ function myfetch(url) {
   }
 
 
-const button = document.getElementById('api-fetch')
-const fetchPlaceHolder = document.getElementById('fetch-data')
-const url = 'https://jsonplaceholder.typicode.com/todos/1'
-const circle = document.getElementById('circle')
-const afterParty = document.getElementById('after-party')
-
-
-
 
 const clickFetchApi = () => {
-
+    
     console.log('fetch api() clicked.')
     const fetchApiData = myfetch(url)
 
@@ -49,11 +34,8 @@ const clickFetchApi = () => {
     fetchApiData.then(data=>fetchPlaceHolder.textContent = JSON.stringify(data)).catch((err)=>console.log("Failed to fetch data: ", err))
 
     // After party
-    afterParty.innerHTML = 'After party <br> has started'
-    circle.classList.toggle('click-motion')
-    setTimeout(()=>{
-        circle.classList.toggle('click-motion')
-    }, 15000)
+    afterParty.innerHTML = 'After Party <br> has started'
+    circle.classList.add('click-motion')
 }
 
 
